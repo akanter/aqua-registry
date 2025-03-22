@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: envoyproxy
+    repo_name: protoc-gen-validate
+    description: "Protocol Buffer Validation - Being replaced by github.com/bufbuild/protovalidate"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        no_asset: true

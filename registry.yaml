@@ -22969,6 +22969,14 @@ packages:
       asset: terratag_{{trimV .Version}}_checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: envoyproxy
+    repo_name: protoc-gen-validate
+    description: "Protocol Buffer Validation - Being replaced by github.com/bufbuild/protovalidate"
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        no_asset: true
+  - type: github_release
     repo_owner: equinix-labs
     repo_name: otel-cli
     description: OpenTelemetry command-line tool for sending events from shell scripts & similar environments
