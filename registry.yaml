@@ -22971,11 +22971,24 @@ packages:
   - type: github_release
     repo_owner: envoyproxy
     repo_name: protoc-gen-validate
-    description: "Protocol Buffer Validation - Being replaced by github.com/bufbuild/protovalidate"
-    version_constraint: "false"
-    version_overrides:
-      - version_constraint: "true"
-        no_asset: true
+    description: Protocol Buffer Validation - Being replaced by github.com/bufbuild/protovalidate
+    asset: protoc-gen-validate_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+    format: tar.gz
+    version_constraint: semver(">= 0.10.0, <= 1.0.2, >= 1.2.0")
+    checksum:
+      type: github_release
+      asset: protoc-gen-validate_{{trimV .Version}}_checksums.txt
+      file_format: regexp
+      algorithm: sha256
+      pattern:
+        checksum: ^(.{64})
+        file: "^.{64}\\s+(\\S+)$"
+    files:
+      - name: protoc-gen-validate
+      - name: protoc-gen-validate-cpp
+      - name: protoc-gen-validate-go
+      - name: protoc-gen-validate-java
+    supported_envs: ["all"]
   - type: github_release
     repo_owner: equinix-labs
     repo_name: otel-cli

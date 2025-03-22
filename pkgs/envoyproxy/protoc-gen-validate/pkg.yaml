@@ -1,1 +1,14 @@
-packages: []
+packages:
+  - name: envoyproxy/protoc-gen-validate@v1.2.1
+  - name: envoyproxy/protoc-gen-validate
+    version: v1.2.0
+  - name: envoyproxy/protoc-gen-validate
+    version: v1.0.2
+  - name: envoyproxy/protoc-gen-validate
+    version: v1.0.1
+  - name: envoyproxy/protoc-gen-validate
+    version: v1.0.0
+  - name: envoyproxy/protoc-gen-validate
+    version: v0.10.1
+  - name: envoyproxy/protoc-gen-validate
+    version: v0.10.0
